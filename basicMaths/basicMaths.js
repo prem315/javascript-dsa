@@ -1,3 +1,4 @@
+// count digits
 function countDigits(num) {
   let count = 0;
   while (num > 0) {
@@ -24,4 +25,15 @@ function checkPalindrome(num) {
   }
 }
 
-export { countDigits, checkPalindrome };
+//  reverse a number
+function reverseNumber(num) {
+  let reverseNumber = 0;
+  while (num > 0) {
+    let lastDigit = num % 10;
+    num = Math.floor(num / 10);
+    reverseNumber = 10 * reverseNumber + lastDigit;
+  }
+  return reverseNumber;
+}
+
+export { countDigits, checkPalindrome, reverseNumber };
